@@ -20,7 +20,7 @@ html{
     height: 231.6px;
     background: url("./Images/pumpkin1.png") ;
     background-size: cover;
-    animation: logo 5s linear normal ;
+    animation: logo 5s linear 1s normal ;
 }
 .logoname{
     margin-top: 10px;
