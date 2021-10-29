@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import chattinlogo from '../Images/pumpkin2.png';
+import chattinlogo from '../Images/pumpkin211.png';
 import { MdMessage , MdViewHeadline} from "react-icons/md";
 import { IoPerson } from "react-icons/io5";
 import  { useState } from 'react';
