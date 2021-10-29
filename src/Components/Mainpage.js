@@ -132,10 +132,8 @@ export const Mainpage = () => {
                  <div className="chathead">Meetup</div>
                  <div className="chatbox">
                      <img src={chatlogo} alt="" width="100px"/>
-                     <input type="text" placeholder="Username" className="inp1" />
-                     <input type="password" placeholder="Password" className="inp2" />
-                    <Link to="/chat" className="linkss"><button className="btnchat">Login</button></Link>
-                    <Link to="/signup" className="linkss"><button className="btnchats">Signup</button></Link>
+                     <input type="text" placeholder="Enter your name" className="inp1" />
+                    <Link to="/chat" className="linkss"><button className="btnchat">Show</button></Link>
                  </div>
              </section>
          </main>

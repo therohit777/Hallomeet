@@ -1,7 +1,6 @@
 import "./App.css";
 import { Hallologo } from "./Components/Hallologo";
 import { Chatapp } from "./Components/Chatapp";
-import { Signup } from "./Components/Signup";
 import { Profile } from "./Components/Profile";
 import {
   BrowserRouter as Router,
@@ -21,10 +20,6 @@ function App() {
 
           <Route path="/chat">
             <Chatapp />
-          </Route>
-
-          <Route path="/signup">
-            <Signup/>
           </Route>
 
           <Route path="/profile">
