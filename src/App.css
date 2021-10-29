@@ -1,38 +1,686 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Griffy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+html{
+    scroll-behavior: smooth;
+}
+.body{
+    position: relative;
+}
+.App{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(67, 4, 126);
+}
+.logo{
+    width: 265px;
+    height: 231.6px;
+    background: url("./Images/pumpkin1.png") ;
+    background-size: cover;
+    animation: logo 5s linear normal ;
+}
+.logoname{
+    margin-top: 10px;
+    font-family: 'Griffy', cursive;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+@keyframes logo {
+    0%{
+        width: 165px;
+        height:  143.6px;
+        transform: rotateY(360deg);
+    }
+    10%{
+        visibility: hidden;
+    }
+    20%{
+        visibility: visible;
+    }
+    
+    90%{
+        width: 265px;
+        height:  231.6px;
+        transform: rotateY(0deg);
+    }
+    
+}
+header{
+    top:0;
+    position: sticky;
+    z-index: 2;
+}
+.navbar{
+    background-color: rgba(20, 20, 20, 0.918);
+    display: flex;
+    justify-content: space-between;
+}
+.homelogo{
+    display: flex;
+    padding-left: 30px;
+}
+.homelogotext{
+    color: white;
+    font-family: 'Griffy', cursive;
+    font-size: 30px;  
+    padding-left: 15px;
+}
+.navigation{
+    margin-top: 3.5vh;
+}
+.navigation ul{
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navigation ul li{
+    list-style: none;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Griffy', cursive;
+    font-size: 18px;
+}
+.navigation ul li a:hover{
+    color: tomato;
+}
+.hambur{
+    position: absolute;
+}
+.hamburger{
+    color: white;
+    font-size: 45px;
+    visibility: hidden;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px) {
+    .navbar{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .homelogo{
+        padding-left: 0;
+    }
+    .navigation{
+        margin-right: 0;
+        margin-top: 90vh;
+        position: absolute;
+        left: 58%;
+        z-index: 1;
+        visibility: hidden;
+    }
+    .navigation ul{
+        width: 200px;
+        height: 350px;
+        flex-direction: column;
+        background-color: rgb(44, 44, 44); 
+        text-align: center;
+        padding-left: 0;
+    }
+    .hambur{
+        left: 85%;
+    }
+    .hamburger{
+        visibility: visible;
+    }
+    .hamvisi{
+        animation: navbars 1s ease-in-out normal;
+        visibility: visible;
+    }
+    @keyframes navbars {
+        from {
+            transform: translateY(-60px);
+        }
+        to{
+            transform: translateY(0px);
+        }
+        
+    }
+}
+@media screen and (max-width:500px) {
+    .navigation{
+        left:40%
+    }
+    
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Main */
+.display{
+    height: 100vh;
+    background-color: black;
+}
+.disk1{
+    width: 100%;
+    height:100vh;
+    background: url('./Images/ha.jpg') no-repeat;
+    background-color: rgb(0, 0, 0);;
+    background-size: cover;
+    padding-bottom: 10vh;
+    background-attachment: fixed;
+}
+.disk2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50vh;
+    font-family: 'Nosifer', cursive;
+    text-shadow: rgb(255, 0, 0) 1px 0 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+
+
+.spell{
+  width: 100%;
+  height: 120vh;
+  background-color: black;
   color: white;
+  overflow:hidden ;
+}
+.spellhead{
+    font-size: 45px;
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    padding-top: 17vh;   
+    position: relative;
+}
+.spellstore{
+    overflow-x: scroll;
+    display: flex;
+    justify-content: space-between;
+    scrollbar-width: 0px;
+}
+.spellmagic{
+    transition: 0.3s;
+    padding:0 35px 150px 35px ;
 }
 
-.App-link {
-  color: #61dafb;
+.btns{
+    margin-top: 60vh;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+.btn1{
+    width: 10px;
+    height: 10px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  margin-left: 15px;
+}
+.btn2{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.btncol{
+    background-color: rgb(255, 253, 250);
+    width: 40px;
+    height: 2px;
+    border-radius: 50px;
+    margin-top: 4px;
+}
+.slide{
+    transition: 0.3s;
+    transform: translateX(-1280px);
+    scroll-behavior: smooth;
+}
+@media screen and (max-width:1000px) {
+    .btns{
+        visibility: hidden;
+    }
+    
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.story{
+    width: 100%;
+    height: 150vh;
+    background: url('./Images/disk2.jpg')no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.storyhead{
+  color: white;
+  margin-top: 0px;
+  text-align: center;
+  font-family: 'Griffy', cursive;
+  font-size: 45px;
+  padding-top: 25vh;
+  text-shadow: rgb(0, 0, 0) 1px 0 10px;
+}
+.storyinput{
+    width: 60%;
+    padding: 6px 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-size: 20px;
+    border: 1px solid grey;
+    font-family: 'Griffy', cursive;
+    border-radius: 50px;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.753);
+    text-align: center;
+}
+.searchbtn{
+    margin-top: 5vh;
+    padding: 10px 0px;
+    width: 20%;
+    color: white;
+    background-color: black;
+    font-family: 'Griffy', cursive;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.527);
+}
+.searchbtn:hover{
+    background-color: rgb(20, 18, 18);
+}
+.videos{
+    margin-top: 50px;
+    display: flex;
+}
+.videoss{
+    margin: 0px 20px;
+    box-shadow: 0 20px 20px 0 #000000;
+    width: 90%;
+    border-radius: 15px;
+}
+@media screen and (max-width:1000px) {
+    .story{
+        height: 175vh;
+    }
+    .cocovid{
+        display: none;
+    }
+    .videos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .videoss{
+        margin:10px 0px;
+    }
+    .vidd{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:450px) {
+    .story{
+        height: 155vh;
+    }
+    
+}
+
+
+.hallochat{
+    width: 100%;
+    height: 110vh;
+
+    background: url('./Images/chohu.jpg');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chathead{
+    font-size: 45px;
+    font-family: 'Griffy', cursive;
+    text-align: center;
+    padding-top: 23vh;   
+    color: white;
+    padding-bottom:6vh ;
+}
+.chatbox{
+   background:url('./Images/back.jpg');
+   width: 26%;
+   height: 57vh;
+   display: flex;
+   flex-direction: column;
+   border-radius: 20px;
+   align-items: center;
+   border:2px solid rgba(141, 125, 125, 0.473);
+}
+.inp1{
+    margin-top: 30px;
+    width: 80%;
+    padding: 6px 0px;
+    text-align: center;
+    font-family: 'Griffy', cursive;
+    color: grey;
+    background-color:  rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid grey ;
+}
+.inp2{
+    margin-top: 18px;
+    width: 80%;
+    padding: 6px 0px;
+    text-align: center;
+    font-family: 'Griffy', cursive;
+    color: grey;
+    background-color:  rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid grey ;
+}
+.btnchat{
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-family: 'Griffy', cursive;
+}
+.btnchat:hover{
+    background-color: rgb(19, 18, 18);
+}
+.btnchats{
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Griffy', cursive;
+}
+.btnchats:hover{
+    background-color: rgb(19, 18, 18);
+}
+.linkss{
+    width: 45%;
+}
+@media screen and (max-width:1000px) {
+    .chatbox{
+        width: 40%;
+    }
+    .linkss{
+        width: 60%;
+    }
+    
+}
+@media screen and (max-width:450px) {
+    .chatbox{
+        width: 60%;
+    }
+    
+}
+.signup{
+    width: 100%;
+    height: 100vh;
+    background: url('./Images/chohu.jpg');
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.signbox{
+    width: 26%;
+    height: 73vh;
+    background: url('./Images/back.jpg')no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    border:2px solid rgba(141, 125, 125, 0.473);
+}
+.signconti{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inp11{
+    margin-top: 30px;
+    width: 80%;
+    padding: 6px 0px;
+    text-align: center;
+    font-family: 'Griffy', cursive;
+    color: grey;
+    background-color:  rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid grey ;
+}
+.inp12{
+    margin-top: 12px;
+    width: 80%;
+    padding: 6px 0px;
+    text-align: center;
+    font-family: 'Griffy', cursive;
+    color: grey;
+    background-color:  rgb(0, 0, 0);
+    border-radius: 5px;
+    border: 1px solid grey ;
+}
+.btnchat1{
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 30px;
+    background-color: black;
+    color: white;
+    font-family: 'Griffy', cursive;
+}
+.btnchat2{
+    width: 100%;
+    padding: 5px 0px;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    font-family: 'Griffy', cursive;
+}
+.btnchat1:hover{
+    background-color: rgb(19, 18, 18);
+}
+.btnchat2:hover{
+    background-color: rgb(19, 18, 18);
+}
+.linkss1{
+    width: 40%;   
+}
+@media screen and (max-width:1000px) {
+    .signbox{
+        width: 45%;
+    }
+    .linkss1{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .signbox{
+        width: 65%;
+    }
+}
+
+
+
+
+.chattinbox{
+    width: 100%;
+    height: 100vh;
+}
+.chattinheader{
+    background-color: #000000;
+}
+.chattinlogo{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+    position: relative;
+}
+.chattinhead{
+    color: white;
+    font-family: 'Griffy', cursive;
+    font-size: 20px;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+.chattinnavigators{
+    padding-top: 25px;
+    display: flex;
+    position: absolute;
+    left:80%;
+}
+.logonames{
+    display: flex;
+}
+.reacticonss{
+    color: white;
+    font-size: 25px;
+    margin:0px 10px ;
+}
+.reacticonss:hover{
+    color: rgb(185, 173, 173);
+}
+.logoutss{
+    width: 100%;
+    margin-left: 10px;
+    padding: 5px 20px;
+    background-color: black;
+    color: white;
+    font-family: 'Griffy', cursive;   
+}
+.logoutss:hover{
+    background-color: rgb(19, 18, 18);
+}
+.hambu{
+    color: white;
+    font-size: 45px;
+    visibility: hidden;
+    cursor: pointer;
+}
+@media screen and (max-width:1000px) {
+     .chattinnavigators{
+         top: 15vh;
+         width: 120px;
+         height: 130px;
+         left: 75%;
+         flex-direction: column;
+         align-items: center;
+         justify-content: space-evenly;
+         background-color: #333;
+     }    
+     .reacticonss{
+        margin: 0 0;
+     }
+     .logoutss{
+         margin-left: 0px;
+     }
+     .hambu{
+         visibility: visible;
+     }
+     .hamchat{
+         position: absolute;
+         top: 16px;
+         left: 80%;
+     }
+     .displaysyes{
+         visibility: hidden;
+     }
+}
+
+
+
+
+
+
+
+.profilecontainer{
+    width: 100%;
+    height: 86.33vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profilebox{
+    background-color: #b5dcdfe5;
+    width: 50%;
+    border-radius: 10px;
+    height: 60vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    color: white;
+    background-color: rgba(24, 22, 22, 0.979);
+    text-align: center;
+    font-size: 12px;
+    overflow-y: hidden;
+    font-family: inherit;
+ }
+.footlogo{
+    font-size: 22px;
+    margin-top: 0px;
+    padding-top: 6vh;
+    font-family:  'Griffy', cursive;;
+}
+.copy{
+    background-color: #000000;
+    padding: 4.5vh 0;
+    color: rgb(187, 173, 173);
+    margin-bottom: 0;
+}
+.a1{
+    color: white;
+    font-size: 20px;
+}
+.socialmedia{
+    margin-top: 35px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+.socialmedia a{
+    color: white;
+}
+.socialmedia .a1{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+}
+.socialmedia .a11:hover{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.socialmedia .a2:hover{
+    background-color:  #0077b5;
+}
+.socialmedia .a3:hover{
+    background-color:  #333;
+}
+.socialmedia .a4:hover{
+    background-color:  #1DA1F2;
+}
+.socialmedia .a5:hover{
+    background-color: #FF0000;
+}
+.s1{
+    width: 250px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Mobile view */
