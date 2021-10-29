@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../Images/pumpkin2.png';
+import logo from '../Images/pumpkin211.png';
 import  { useRef,useState,useEffect} from 'react';
 import {MdViewHeadline} from "react-icons/md";
 import { Link } from 'react-router-dom';
