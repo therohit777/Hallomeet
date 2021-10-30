@@ -77,7 +77,7 @@ export const Mainpage = () => {
                      <li><a href="#display">Home</a></li>
                      <li><a href="#spells">Spells</a></li>
                      <li><a href="#stories">Stories & Pranks</a></li>
-                     <li><a href="#chat">Meetup</a></li>
+                     <li><a href="#chat">Spin the wheel</a></li>
                  </ul>
              </div>
             
@@ -129,11 +129,11 @@ export const Mainpage = () => {
              </section>
 
              <section className="hallochat" id="chat">
-                 <div className="chathead">Meetup</div>
+                 <div className="chathead">Spin the Wheel</div>
                  <div className="chatbox">
                      <img src={chatlogo} alt="" width="100px"/>
                      <input type="text" placeholder="Enter your name" className="inp1" />
-                    <Link to="/chat" className="linkss"><button className="btnchat">Show</button></Link>
+                    <Link to="/chat" className="linkss"><button className="btnchat">Play</button></Link>
                  </div>
              </section>
          </main>

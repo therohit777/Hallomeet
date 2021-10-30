@@ -20,7 +20,7 @@ html{
     height: 231.6px;
     background: url("./Images/pumpkin12.png") ;
     background-size: cover;
-    animation: logo 5s linear normal ;
+    animation: logo 6s linear normal ;
 }
 .logoname{
     margin-top: 10px;
@@ -34,7 +34,6 @@ html{
     0%{
         width: 165px;
         height:  143.6px;
-        transform: rotateY(360deg);
     }
     10%{
         visibility: hidden;
@@ -46,7 +45,6 @@ html{
     90%{
         width: 265px;
         height:  231.6px;
-        transform: rotateY(0deg);
     }
     
 }
