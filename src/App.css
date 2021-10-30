@@ -18,9 +18,9 @@ html{
 .logo{
     width: 265px;
     height: 231.6px;
-    background: url("./Images/pumpkin12.png") ;
+    background: url("./Images/pumpkin13.png") ;
     background-size: cover;
-    animation: logo 6s linear normal ;
+    animation: logo 5s linear normal ;
 }
 .logoname{
     margin-top: 10px;
