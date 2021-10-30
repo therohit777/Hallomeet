@@ -5,7 +5,7 @@ export const Hallologo = () => {
     const history = useHistory();  
     setTimeout(() => {
         history.push("/home");
-    }, 7000);
+    }, 5500);
 
 
     return (

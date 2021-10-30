@@ -31,20 +31,12 @@ html{
     text-shadow: rgb(0, 0, 0) 1px 0 10px;
 }
 @keyframes logo {
-    0%{
-        width: 165px;
-        height:  143.6px;
-    }
+    
     10%{
         visibility: hidden;
     }
     20%{
         visibility: visible;
-    }
-    
-    90%{
-        width: 265px;
-        height:  231.6px;
     }
     
 }
