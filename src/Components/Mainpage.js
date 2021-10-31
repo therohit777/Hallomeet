@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../Images/pumpkin211.png';
 import  { useRef,useState,useEffect} from 'react';
 import {MdViewHeadline} from "react-icons/md";
-import { Link } from 'react-router-dom';
 import { FaInstagram , FaLinkedinIn , FaGithub , FaTwitter , FaYoutube} from "react-icons/fa";
 import spell1 from '../Images/spell3.jpg';
 import spell2 from '../Images/spell2.jpg';
@@ -13,6 +12,8 @@ import spell6 from '../Images/spell5.jpg';
 import spell7 from '../Images/spell6.jpg';
 import spell8 from '../Images/spells 7.jpg';
 import chatlogo from '../Images/pumpkin2.png';
+import { useHistory } from 'react-router';
+
 
 export const Mainpage = () => {
     const [navbard, setnavbard] = useState(false);
@@ -20,7 +21,8 @@ export const Mainpage = () => {
     const [s2, sets2] = useState(false);
     const navdisplay = useRef('');
     const searchbox = useRef();
-    const [searchinput, setsearchinput] = useState('graveyard');
+    const inpname = useRef('');
+    const [searchinput, setsearchinput] = useState('Halloween');
     const [vid1, setvid1] = useState('');
     const [vid2, setvid2] = useState('');
     const [vid3, setvid3] = useState('');
@@ -33,12 +35,14 @@ export const Mainpage = () => {
         a.current.value='';
     }
 
+    const history = useHistory();  
+    
     useEffect(() => {
         if(searchinput===''){
             alert('No search item in Searchbox!')
         }
         else{
-            fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=6&q=halloween${searchinput}&key=AIzaSyD4m3uya_A_aWOze4GKO_IyBq8PGD3V8TQ`)
+            fetch(`https://youtube.googleapis.com/youtube/v3/search?maxResults=6&q=halloween${searchinput}&key=AIzaSyBxsZcBe2MJOQO3lllZuqyesjbdajJesJo`)
             .then(response=>response.json())
             .then(data=>{
                 setvid1(data.items[0].id.videoId);
@@ -74,10 +78,10 @@ export const Mainpage = () => {
                   
              <div className={(navbard)? "navigation hamvisi":"navigation"} ref={navdisplay} >
                  <ul>
-                     <li><a href="#display">Home</a></li>
-                     <li><a href="#spells">Spells</a></li>
-                     <li><a href="#stories">Stories & Pranks</a></li>
-                     <li><a href="#chat">Spin the wheel</a></li>
+                     <li className="listmain"><a href="#display">Home</a></li>
+                     <li className="listmain"><a href="#spells">Spells</a></li>
+                     <li className="listmain"><a href="#stories">Stories & Pranks</a></li>
+                     <li className="listmain"><a href="#chat">Spin the wheel</a></li>
                  </ul>
              </div>
             
@@ -132,8 +136,20 @@ export const Mainpage = () => {
                  <div className="chathead">Spin the Wheel</div>
                  <div className="chatbox">
                      <img src={chatlogo} alt="" width="100px"/>
-                     <input type="text" placeholder="Enter your name" className="inp1" />
-                    <Link to="/chat" className="linkss"><button className="btnchat">Play</button></Link>
+                     <input type="text" placeholder="Enter your name" className="inp1"  ref={inpname} />
+                    <button className="btnchat" onClick={()=> {
+                        if(inpname.current.value===''){
+                            alert("Plese enter your name:")
+                        }
+                        else{
+                            history.push({
+                                pathname: '/chat',  
+                                state: {  
+                                  update: inpname.current.value, 
+                                },
+                              });
+                        }
+                    }}>Play</button>
                  </div>
              </section>
          </main>

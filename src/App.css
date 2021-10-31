@@ -7,39 +7,6 @@ html{
 .body{
     position: relative;
 }
-.App{
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(67, 4, 126);
-}
-.logo{
-    width: 265px;
-    height: 231.6px;
-    background: url("./Images/pumpkin13.png") ;
-    background-size: cover;
-    animation: logo 5s linear normal ;
-}
-.logoname{
-    margin-top: 10px;
-    font-family: 'Griffy', cursive;
-    color: white;
-    font-size: 60px;
-    text-align: center;
-    text-shadow: rgb(0, 0, 0) 1px 0 10px;
-}
-@keyframes logo {
-    
-    10%{
-        visibility: hidden;
-    }
-    20%{
-        visibility: visible;
-    }
-    
-}
 header{
     top:0;
     position: sticky;
@@ -356,7 +323,7 @@ header{
 }
 
 .btnchat{
-    width: 100%;
+    width: 40%;
     padding: 5px 0px;
     margin-top: 15px;
     background-color: black;
@@ -399,9 +366,11 @@ header{
 .chattinbox{
     width: 100%;
     height: 100vh;
+    background: url('./Images/chohu3.jpg');
+    background-size: cover;
 }
 .chattinheader{
-    background-color: #000000;
+    background-color: rgba(20, 20, 20, 0.918);
 }
 .chattinlogo{
     display: flex;
@@ -416,104 +385,40 @@ header{
     margin-top: 25px;
     margin-left: 10px;
 }
-.chattinnavigators{
-    padding-top: 25px;
-    display: flex;
-    position: absolute;
-    left:80%;
-}
-.logonames{
-    display: flex;
-}
-.reacticonss{
+.welcomespin{
+    text-align: center;
+    font-size: 30px;
     color: white;
-    font-size: 25px;
-    margin:0px 10px ;
+    font-family: 'Griffy', cursive;
 }
-.reacticonss:hover{
-    color: rgb(185, 173, 173);
-}
-.logoutss{
-    width: 100%;
-    margin-left: 10px;
-    padding: 5px 20px;
-    background-color: black;
-    color: white;
-    font-family: 'Griffy', cursive;   
-}
-.logoutss:hover{
-    background-color: rgb(19, 18, 18);
-}
-.hambu{
-    color: white;
-    font-size: 45px;
-    visibility: hidden;
-    cursor: pointer;
-}
-@media screen and (max-width:1000px) {
-     .chattinnavigators{
-         top: 15vh;
-         width: 120px;
-         height: 130px;
-         left: 75%;
-         flex-direction: column;
-         align-items: center;
-         justify-content: space-evenly;
-         background-color: #333;
-     }    
-     .reacticonss{
-        margin: 0 0;
-     }
-     .logoutss{
-         margin-left: 0px;
-     }
-     .hambu{
-         visibility: visible;
-     }
-     .hamchat{
-         position: absolute;
-         top: 16px;
-         left: 80%;
-     }
-     .displaysyes{
-         visibility: hidden;
-     }
-}
-
-
-
-
-
-
-
-.profilecontainer{
-    width: 100%;
-    height: 86.33vh;
+.btnspins{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
-.profilebox{
-    background-color: #b5dcdfe5;
-    width: 50%;
-    border-radius: 10px;
-    height: 60vh;
+.btnspin{
+    width: 10%;
+    padding: 5px 0px;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    font-family: 'Griffy', cursive;
+}
+.wheels{
+    position: relative;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.circlearrow{
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 50px solid rgb(255, 0, 0);
+    position: absolute;
+    left: 50%;
+    top:-20px;
+    z-index: 1;
+}
 
 .footer{
     color: white;
