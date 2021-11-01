@@ -1,5 +1,5 @@
 <h1>Hallomeet</h1>
-<p>Hallomeet app have been built on the Special Ocassion of Halloween.</p>
+<p>Hallomeet app have been built on Halloween theme.</p>
 <img width="944" alt="Screenshot " src="https://user-images.githubusercontent.com/87574570/139573014-84f1daea-31e1-438e-9e2e-cf47062a9f2b.png">
 
 
